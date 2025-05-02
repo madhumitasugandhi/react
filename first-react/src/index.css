@@ -1,0 +1,14 @@
+*{
+  magin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 200hv;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #282c34;
+  color: white;
+  font-size: 30px;
+}
