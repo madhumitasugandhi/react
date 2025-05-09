@@ -5,10 +5,14 @@ function TimerComponent() {
 
     useEffect(() => {
         const interval = setInterval(() => {
+            console.log('Interval running...');
             setSeconds(prevSeconds => prevSeconds + 1);
         }, 1000);
 
-        return () => clearInterval(interval); // Cleanup function to clear the interval
+        return () => {clearInterval(interval);
+            console.log('Interval cleared');
+            clearInterval(interval); // Cleanup function to clear the interval
+        };
     }, []); // Empty dependency array to run only on mount and unmount
 
     return (
