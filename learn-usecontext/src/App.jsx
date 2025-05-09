@@ -1,16 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { createContext, useState } from 'react';
 import './App.css'
+import ChildA from './components/ChildA';
 
+
+const ThemeContext = createContext();
 function App() {
-  const [count, setCount] = useState(0)
+ 
+  const [theme, setTheme] = useState("light");
 
   return (
-    <div>
-      
-    </div>
+    <ThemeContext.Provider value={{theme, setTheme}}>
+      <div id='container' style={{backgroundColor:theme==="light"?"beige":"black"}}>
+        <ChildA />
+      </div>
+
+    </ThemeContext.Provider>
   )
 }
 
 export default App
+export { ThemeContext }
