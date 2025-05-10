@@ -6,7 +6,7 @@ const ParamComp = () => {
     const {id} = useParams();
   return (
     <div>
-        Params: {id}
+        <h3>Params: {id}</h3>
     </div>
   )
 }

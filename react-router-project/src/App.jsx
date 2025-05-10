@@ -7,6 +7,7 @@ import Dashboard from './components/Dashboard';
 import Navbar from './components/Navbar';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ParamComp from './components/ParamComp';
+import NotFound from './components/NotFound';
 
 const router = createBrowserRouter(
   [
@@ -38,6 +39,13 @@ const router = createBrowserRouter(
         <Navbar />
         <ParamComp/>
         <h1>Student</h1>
+      </div>
+    },
+    {
+      path:'*',
+      element: <div>
+        <Navbar/>
+        <NotFound />
       </div>
     }
   ]

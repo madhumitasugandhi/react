@@ -9,9 +9,9 @@ const Navbar = () => {
     return (
         <div>
             <ul>
-                <li><NavLink to="/" className={({isActive})=> isActive? "active-Link": "" }>Home</NavLink></li>
-                <li><NavLink to="/about" >About</NavLink></li> 
-                <li><NavLink to="/dashboard">Dashboard</NavLink></li>  
+                <li><NavLink to="/" className="nav">Home</NavLink></li>
+                <li><NavLink to="/about" className="nav" >About</NavLink></li> 
+                <li><NavLink to="/dashboard" className="nav">Dashboard</NavLink></li>  
             </ul>
         </div>
     )
