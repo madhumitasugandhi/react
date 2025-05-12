@@ -40,3 +40,26 @@
 .read-the-docs {
   color: #888;
 }
+.App{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+   height: 100px;
+  font-family: sans-serif;
+  gap: 1rem;
+}
+.reset{
+  color: white;
+  border: none;
+  margin: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.inc-amount{
+  color: white;
+  border: none;
+  margin: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
