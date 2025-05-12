@@ -40,3 +40,39 @@
 .read-the-docs {
   color: #888;
 }
+.error-msg{
+  color: red;
+  font-size: 0.8em;
+  margin-top: 0.5em;
+}
+.error-msg::before{
+  content: "⚠️ ";
+}
+.error-msg::after{
+  content: " ⚠️";
+}
+.error-msg::first-letter{
+  text-transform: uppercase;
+}
+.error-msg::first-line{
+  font-weight: bold;
+}
+.error-msg::first-line{
+  text-decoration: underline;
+}
+.error-msg::first-letter{
+  text-decoration: underline;
+}
+.error-msg::first-letter{
+  text-decoration: underline;
+}
+label{
+  display: flex;
+  margin-bottom: 0.5em;
+}
+input{
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border: 1px solid #ccc;
+  width: 100%;
+}
