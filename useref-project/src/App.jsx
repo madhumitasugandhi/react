@@ -1,30 +1,34 @@
-import { useEffect, useState, useRef, use} from 'react'
+import { useEffect, useState, useRef, use } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0);
-  let val = useRef(0);
 
-  function handleIncrement() {
-    val.current = val.current + 1;
-    console.log("value of val:", val.current);
-    setCount(count + 1);
+  const [time, setTime] = useState(0);
+
+  let timerRef = useRef(null);
+
+  function startTimer() {
+     timerRef.current = setInterval(() => {
+      setTime(time => time + 1);
+    }, 1000);
   }
-
-  useEffect(() => {
-    console.log("I mainly run once");
-  })
-
+  function stopTimer() {
+    clearInterval(timerRef.current);
+    timerRef.current = null;
+  }
+  function resetTimer() {
+    stopTimer();
+    setTime(0);
+  }
   return (
-   <div>
-      <button onClick={handleIncrement} >
-        Increment
-      </button><br/>
-      <button>
-        Count: {count}
-      </button>
-   </div>
-  )
+  
+  <div>
+    <h1>Timer: {time} sec</h1>
+    <button className='btn-start' onClick={startTimer}>Start</button>
+    <button className='btn-stop' onClick={stopTimer}>Stop</button>
+    <button className='btn-reset' onClick={resetTimer}>Reset</button>
+  </div>)
+  
 }
 
 export default App
