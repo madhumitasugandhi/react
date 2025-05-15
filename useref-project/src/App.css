@@ -40,3 +40,34 @@
 .read-the-docs {
   color: #888;
 }
+
+.btn-start{
+  background-color: #61dafb;
+  color: #282c34;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px 7px;
+}
+.btn-stop{
+  background-color: #ff4d4d;
+  color: #282c34;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px 7px;
+}
+.btn-reset{
+  background-color: #ffcc00;
+  color: #282c34;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px 7px;
+}
